@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="headerfooter/logo.png" type="image/x-icon">
+    <style>
+       
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .rectangle {
+            width: 30%;
+            border: 1px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .rectangle img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .rectangle a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .rectangle a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background-color: #333;
+            color: rgb(212, 198, 198);
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendi Im</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #edeaea; /* Default background color */
+            transition: background-color 0.3s ease; /* Transition for background color */
+        }
+
+        .ballina {
+    display: flex;
+    justify-content: space-between;
+ 
+    margin-top: 20px; /* Adjust margin as needed */
+}
+.aleanca {
+    font-size: 15px; /* Adjust font size as needed */
+    margin-right: 60px; /* Position 50px from the right side */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    background-image: url('images/STADIUM1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    padding: 0 12px;
+}
+.aleanca a {
+        text-decoration: none; /* Remove underline */
+        color: white; /* Set link color to white */
+    }
+
+    .aleanca a:hover {
+        text-decoration: none; /* Prevent underline on hover */
+    }
+
+    .aleanca p {
+        color: white; /* Set paragraph text to white */
+        margin: 0; /* Optional: Remove default paragraph margin */
+    }
+.slider-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 750px; /* Set width of slider */
+            height: 300px; /* Set height of slider */
+            margin-left: 50px;
+        }
+
+.slider-content {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%; /* Ensure the height fills the slider container */
+        }
+
+.slider-item {
+            flex: 0 0 750px; /* Fixed width equal to slider container width */
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default box shadow */
+            transition: box-shadow 0.3s ease; /* Transition for box shadow */
+        }
+
+.slider-item:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+        }
+
+.slider-item:nth-child(1):hover {
+            background-color: #f44336; /* Reddish background for first slide */
+        }
+
+.slider-item:nth-child(2):hover {
+            background-color: #2196f3; /* Blue background for second slide */
+        }
+
+.slider-item:nth-child(3):hover {
+            background-color: #ffeb3b; /* Yellow background for third slide */
+        }
+
+.slider-item img {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+.slider-item .slider-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            z-index: 1;
+        }
+
+.slider-item .slider-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+.slider-item .slider-description {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+.slider-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+.slider-item:hover img {
+            transform: scale(1.1);
+        }
+
+.slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+.slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+.slider-dot.active {
+            background-color: #333;
+        }      
+.container{
+    background-color: #c0b1b1;
+    border-radius: 25px; 
+    border-color: red;
+    border-width: 5px;
+}
+.rectangle{
+    background-color: #333;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="headerfooter/logo.png" alt="Logo" height="50">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nav/video.html">Video</a>
+            <a href="nav/sports.html">Sport</a>
+            <a href="https://www.youtube.com/@vendiim2485/videos">YouTube</a>
+            <a href="https://www.facebook.com/aleancakuqezi.tirane?locale=sq_AL">Facebook</a>
+            <a href="https://www.instagram.com/aleanca_kuqezi/">Instagram</a>
+            <a href="live.html">Live</a>
+        </nav>
+    </header>
+   
+<div class="ballina">
+    
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item" data-bg-color="#f44336"> <!-- Reddish background for first slide -->
+                <a href="page1.html">
+                    <img src="images/download.png" alt="Slide 1">
+                    <div class="slider-text">
+                        <div class="slider-title">Welcome to Our Website</div>
+                        <div class="slider-description">Explore the latest news and updates from our community.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="slider-item" data-bg-color="#2196f3"> <!-- Blue background for second slide -->
+                <a href="page2.html">
+                    <img src="images/png-transparent-flag-europe-symbol-flag-of-europe-european-flag-european-union-eu-international.png" alt="Slide 2">
+                    <div class="slider-text">
+                        <div class="slider-title">Discover European Culture</div>
+                        <div class="slider-description">Learn about the diverse cultures and traditions of Europe.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="slider-item" data-bg-color="#ffeb3b"> <!-- Yellow background for third slide -->
+                <a href="page3.html">
+                    <img src="images/Flag_of_Kosovo.png" alt="Slide 3">
+                    <div class="slider-text">
+                        <div class="slider-title">Experience Kosovo</div>
+                        <div class="slider-description">Explore the natural beauty and rich history of Kosovo.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="slider-item" data-bg-color="#ffeb3b"> <!-- Yellow background for third slide -->
+                <a href="page3.html">
+                    <img src="images/Flag_of_Kosovo.png" alt="Slide 3">
+                    <div class="slider-text">
+                        <div class="slider-title">Experience Kosovo</div>
+                        <div class="slider-description">Explore the natural beauty and rich history of Kosovo.</div>
+                    </div>
+                </a>
+            </div>
+            <div class="slider-item" data-bg-color="#ffeb3b"> <!-- Yellow background for third slide -->
+                <a href="page3.html">
+                    <img src="images/Flag_of_Kosovo.png" alt="Slide 3">
+                    <div class="slider-text">
+                        <div class="slider-title">Experience Kosovo</div>
+                        <div class="slider-description">Explore the natural beauty and rich history of Kosovo.</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <ul class="slider-dots">
+            <li class="slider-dot"></li>
+            <li class="slider-dot"></li>
+            <li class="slider-dot"></li>
+            <li class="slider-dot"></li>
+            <li class="slider-dot"></li>
+        </ul>
+    </div>
+    <div class="aleanca">
+        <h1>PERSHENDETJE</h1>
+        <a href="sports.html"><p>KETU DO TE GJENI INFORMACION RRETH SPORTIT</p> </a>
+      </div>
+</div>
+    <div class="container">
+        <div class="rectangle">
+            <a href="page1.html">
+                <img src="images/download.jpg" alt="Image 1">
+            </a>
+            <a href="page1.html">T-55: Shqiperia zoteron plot 40 si ky por versionin kinez keshtu qe e ka emrin type-59
+                </a>
+        </div>
+        <div class="rectangle">
+            <a href="page2.html">
+                <img src="images/airplane.jpg" alt="Image 2">
+            </a>
+            <a href="page2.html">shqiperia zoeronte plot 200+ avion sot ka mos e pyet</a>
+        </div>
+        <div class="rectangle">
+            <a href="page3.html">
+                <img src="images/ship.jpg" alt="Image 3">
+            </a>
+            <a href="page3.html">te pakten akoma kemi nja 4 anije tonat edhe disi moderne</a>
+        </div>
+    </div>
+
+    <audio id="audio1" src="audio/audio1.mp3"></audio>
+    <audio id="audio2" src="audio/audio2.mp3"></audio>
+    <audio id="audio3" src="audio/audio3.mp3"></audio>
+
+    <script>
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const dots = document.querySelectorAll('.slider-dot');
+        const body = document.body;
+
+        sliderItems.forEach((item, index) => {
+            item.addEventListener('mouseenter', function() {
+                const bgColor = this.getAttribute('data-bg-color');
+                body.style.backgroundColor = bgColor;
+                // Pause any currently playing audio
+                const currentAudio = document.querySelector('audio.playing');
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.classList.remove('playing');
+                }
+                // Play audio corresponding to the current slide
+                const audio = document.getElementById(`audio${index + 1}`);
+                if (audio) {
+                    audio.currentTime = 0; // Rewind to start
+                    audio.play();
+                    audio.classList.add('playing');
+                }
+            });
+
+            item.addEventListener('mouseleave', function() {
+                body.style.backgroundColor = '#f0f0f0'; // Reset to default background color
+                const audio = document.getElementById(`audio${index + 1}`);
+                if (audio) {
+                    audio.pause();
+                    audio.classList.remove('playing');
+                }
+            });
+        });
+
+        // Slider functionality
+        const sliderContent = document.querySelector('.slider-content');
+        let currentIndex = 0;
+        let timer;
+
+        function updateSlider(index) {
+            const offset = -index * 750; // Adjusted for slider width
+            sliderContent.style.transform = `translateX(${offset}px)`;
+
+            // Update active dot
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % sliderItems.length;
+            updateSlider(currentIndex);
+        }
+
+        // Automatic slide change every 3 seconds
+        timer = setInterval(nextSlide, 3000);
+
+        // Pause slider on hover
+        sliderContent.addEventListener('mouseenter', () => {
+            clearInterval(timer);
+        });
+
+        // Resume slider on mouse leave
+        sliderContent.addEventListener('mouseleave', () => {
+            timer = setInterval(nextSlide, 3000);
+        });
+
+        // Click on dots to change slide
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider(currentIndex);
+                clearInterval(timer);
+                timer = setInterval(nextSlide, 3000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
